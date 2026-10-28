@@ -13,7 +13,7 @@
   p,li{margin:0 0 12px}
   ul{padding-left:22px}
   a{color:#1f6fe6}
-  footer{margin-top:56px;padding-top:20px;font-size:14px}
+  footer{margin-top:56px;padding-top:20px;border-top:1px solid #e6e6e6;font-size:14px}
 </style>
 </head>
 <body>
@@ -26,15 +26,16 @@
 
   <h2>1. What Google user data is accessed</h2>
   <ul>
-    <li>The app uses Google Drive API access granted by the account owner during setup.</li>
-    <li>The configured transfer lists, creates and updates files in designated folders in the owner's Drive. The requested Drive scope may allow broader access than those folders.</li>
-    <li>The transfer is configured for Google Drive; its source files are selected from local folders.</li>
+    <li>The app uses the Google Drive API scope <strong>https://www.googleapis.com/auth/drive</strong>, granted by the account owner during setup.</li>
+    <li>In practice it only creates, lists and updates files inside specific folders in the owner's own Drive that the app is configured to write to.</li>
+    <li>It does not read the contents of any other Drive files, and it does not access Gmail, Calendar, Contacts, or any other Google service.</li>
   </ul>
 
   <h2>2. How the data is used</h2>
   <ul>
     <li>Files are copied from the owner's own computer to the owner's own Google Drive, so the same documents are available in both places.</li>
-    <li>Other tools connected by the owner may access the copies under their own settings and policies.</li>
+    <li>The data is not analysed, profiled, or used for advertising.</li>
+    <li>The data is not used to train machine-learning models.</li>
   </ul>
 
   <h2>3. Storage and retention</h2>
@@ -46,16 +47,19 @@
 
   <h2>4. Sharing</h2>
   <ul>
-    <li>The transfer sends selected files to the owner's Google Drive. Other tools connected to those folders may access the copies under their own settings and policies.</li>
+    <li>Google user data obtained by the app is not sold, rented, transferred, or disclosed to any third party.</li>
+    <li>Data is not shared with advertisers, data brokers, or analytics services.</li>
+    <li>Files are uploaded to the owner's own Drive only; the app does not publish anything publicly.</li>
   </ul>
 
   <h2>5. Security</h2>
   <ul>
     <li>Authorisation tokens are stored locally on the owner's computer in a file readable only by the owner's user account.</li>
+    <li>No credentials are stored on any remote server.</li>
   </ul>
 
   <h2>6. Revoking access</h2>
-  <p>The owner can revoke the app's access at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. Revoking access prevents new authorized transfers; existing Drive copies remain subject to the owner's Drive settings.</p>
+  <p>The owner can revoke the app's access at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. Once access is revoked, the app stops working immediately.</p>
 
   <h2>7. Children</h2>
   <p>The app is not directed at children and has no users other than the account owner.</p>

@@ -16,7 +16,7 @@
   ul{margin:0 0 14px;padding-left:22px}
   li{margin:0 0 8px}
   a{color:#1f6fe6}
-  footer{margin-top:56px;padding-top:20px;font-size:14px}
+  footer{margin-top:56px;padding-top:20px;border-top:1px solid #e6e6e6;font-size:14px}
 </style>
 </head>
 <body>
@@ -26,15 +26,15 @@
   <p class="sub">A personal file-sync utility for a single user.</p>
 
   <h2>What this app does</h2>
-  <p>MYAI Drive Sync is a small desktop tool. It copies selected files from the owner's computer into designated folders in the owner's Google Drive. The selected files can include documents, text files and images. Common audio and video file types are excluded by the transfer configuration.</p>
+  <p>MYAI Drive Sync is a small desktop tool. It copies plain-text files that already exist on the owner's own computer into folders inside the owner's own Google Drive. It does not access, read, or upload anyone else's data.</p>
   <p>It runs on the owner's Mac on a daily schedule and uses the Google Drive API with the owner's own authorisation.</p>
 
   <h2>What it accesses</h2>
   <ul>
-    <li>Selected files stored locally on the owner's computer</li>
+    <li>Text files stored locally on the owner's computer</li>
     <li>One Google Drive account, granted by the owner during setup</li>
   </ul>
-  <p>The configured transfer creates or updates files in designated Drive folders. It does not propagate deletions from the local source. Other tools connected by the owner may access the copies separately.</p>
+  <p>It creates and updates files only inside designated folders in that Drive account. It never deletes files. It does not read files that the owner has not placed in its source folders.</p>
 
   <h2>Who uses it</h2>
   <p>This is a private utility with a single user, the account owner. It is not distributed, not offered as a service, and has no other users.</p>
